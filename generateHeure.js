@@ -11,9 +11,22 @@ function monHeure() {
     let seconde = date.getSeconds();
 
     console.log("Heure actuelle : " + heure + "h" + minute + "min" + seconde + "s");
+    
 
     return heure + "h" + minute + "min" + seconde + "s";
 
+}
+
+// je déclare une fonction qui retourne la date actuelle
+function dateActuelle() {
+    let date = new Date();
+    let jour = date.getDate();
+    let mois = date.getMonth() + 1;
+    let annee = date.getFullYear();
+
+    console.log("Date actuelle : " + jour + "/" + mois + "/" + annee); 
+
+    return jour + "/" + mois + "/" + annee;
 }
 
 // jaffiche les secondes en dynamique toutes les secondes (1000 millisecondes)
@@ -28,5 +41,6 @@ setInterval(() => {
 // j'exporte ou expose ma fonction pour qu'elle soit accessible depuis un autre fichier
 
 export default {
-    monHeure
+    monHeure,
+    dateActuelle
 };

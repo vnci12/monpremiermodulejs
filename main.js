@@ -15,3 +15,9 @@ import user from "./user.js";
 console.log("Main - utilisateur : ", user);
 
 document.querySelector("#user").textContent = "Utilisateur : " + user.user.prenom + " " + user.user.nom + ", Email : " + user.user.email + ", Mot de passe : " + user.user.motDePasse;
+
+// j'importe la fonction dateActuelle()
+import dateActuelle from "./generateHeure.js";
+console.log("Main - la date actuelle est : " + dateActuelle.dateActuelle());
+
+document.querySelector("#date").textContent = "Date actuelle : " + dateActuelle.dateActuelle();
